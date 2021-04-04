@@ -2,8 +2,8 @@
 
 importer="texture"
 type="StreamTexture"
-path.s3tc="res://.import/Displacement.png-3d762d5885d56118eb48eb5df6b71dcc.s3tc.stex"
-path.etc2="res://.import/Displacement.png-3d762d5885d56118eb48eb5df6b71dcc.etc2.stex"
+path.s3tc="res://.import/Noise4.png-0b9875587b5c89e34219b0b3659929a7.s3tc.stex"
+path.etc2="res://.import/Noise4.png-0b9875587b5c89e34219b0b3659929a7.etc2.stex"
 metadata={
 "imported_formats": [ "s3tc", "etc2" ],
 "vram_texture": true
@@ -11,8 +11,8 @@ metadata={
 
 [deps]
 
-source_file="res://Tests/Displacement.png"
-dest_files=[ "res://.import/Displacement.png-3d762d5885d56118eb48eb5df6b71dcc.s3tc.stex", "res://.import/Displacement.png-3d762d5885d56118eb48eb5df6b71dcc.etc2.stex" ]
+source_file="res://Images/Noise4.png"
+dest_files=[ "res://.import/Noise4.png-0b9875587b5c89e34219b0b3659929a7.s3tc.stex", "res://.import/Noise4.png-0b9875587b5c89e34219b0b3659929a7.etc2.stex" ]
 
 [params]
 

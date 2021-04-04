@@ -1,8 +1,10 @@
+tool
 extends MeshInstance
 
-var time = 0.0
+var time : float = 0.0
 
 func _process(delta: float) -> void:
+	get("material/0").set_shader_param("time", time)
 	time += delta
 	
 func get_water_height(pos : Vector3) -> float:
@@ -10,7 +12,7 @@ func get_water_height(pos : Vector3) -> float:
 	var wave_height = get_water_var("wave_height")
 	var wave_length = get_water_var("wave_length")
 	var time_factor = get_water_var("time_factor")
-	height = wave_height * sin((pos.x + time / time_factor) * wave_length) + wave_height * sin((pos.z + time / time_factor) * wave_length)
+	height = wave_height * sin((pos.x + time / time_factor) / wave_length) + wave_height * sin((pos.z + time / time_factor) / wave_length)
 	return height
 
 func set_water_amplitude(amp : float):

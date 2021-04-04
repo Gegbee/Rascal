@@ -1,9 +1,9 @@
 extends RigidBody
 
 onready var camera : Spatial = $CameraBase
-export var movement_speed : float = 500.0
+export var movement_speed : float = 30.0
 var movement := Vector3()
-export var jump_force : float = 12.0
+export var jump_force : float = 30.0
 export var water_level : float = 0.0
 export var bounce_level : float = 2000.0
 
@@ -30,5 +30,5 @@ func _physics_process(delta: float) -> void:
 		add_force(Vector3(0, bounce_level * delta * (water_level-global_transform.origin.y), 0), Vector3())
 		
 func _integrate_forces(state: PhysicsDirectBodyState) -> void:
-	linear_velocity.x = movement.x
-	linear_velocity.z = movement.z
+	linear_velocity.x += movement.x
+	linear_velocity.z += movement.z

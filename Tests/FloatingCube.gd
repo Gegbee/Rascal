@@ -15,6 +15,7 @@ func _ready() -> void:
 		bounce_level = mass * 4000.0
 		
 func _physics_process(delta: float) -> void:
+	add_central_force(Vector3(-20000.0 * delta, 0, 0))
 	for vertex in vertices:
 		var water_height = get_node("../Water").get_water_height(vertex.global_transform.origin)
 		if vertex.global_transform.origin.y < water_height:
